@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Cyberpunk calculator with neon design by @Nuñez - Advanced web calculator with cool cyan effects">
+    <meta name="keywords" content="calculator, cyber calculator, neon calculator, math tool, web calculator, @Nuñez">
+    <meta name="author" content="@Nuñez">
+    <meta property="og:title" content="Cyber Calculator by @Nuñez">
+    <meta property="og:description" content="Advanced neon-themed web calculator with cyberpunk design">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io">
+    <meta property="og:image" content="https://yourusername.github.io/preview-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <title>Cyber Calculator by @Nuñez | Neon Math Tool</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+
+<body>
+    <div class="watermark">@Nuñez</div>
+
+    <div class="calculator">
+        <button class="theme-toggle" id="themeToggle">☀️</button>
+        <div class="display">
+            <div class="history" id="history"></div>
+            <div id="display">0</div>
+        </div>
+        <div class="buttons">
+            <button class="special" onclick="clearAll()">AC</button>
+            <button class="special" onclick="backspace()">⌫</button>
+            <button class="special" onclick="percentage()">%</button>
+            <button class="operator" onclick="appendOperator('/')">/</button>
+
+            <button onclick="appendNumber('7')">7</button>
+            <button onclick="appendNumber('8')">8</button>
+            <button onclick="appendNumber('9')">9</button>
+            <button class="operator" onclick="appendOperator('*')">×</button>
+
+            <button onclick="appendNumber('4')">4</button>
+            <button onclick="appendNumber('5')">5</button>
+            <button onclick="appendNumber('6')">6</button>
+            <button class="operator" onclick="appendOperator('-')">-</button>
+
+            <button onclick="appendNumber('1')">1</button>
+            <button onclick="appendNumber('2')">2</button>
+            <button onclick="appendNumber('3')">3</button>
+            <button class="operator" onclick="appendOperator('+')">+</button>
+
+            <button class="span-2" onclick="appendNumber('0')">0</button>
+            <button onclick="appendDecimal()">.</button>
+            <button class="equals" onclick="calculate()">=</button>
+            <script src="calculator.js"></script>
+        </div>
+    </div>
+</body>
+
+</html>
