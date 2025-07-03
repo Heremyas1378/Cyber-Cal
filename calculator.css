@@ -78,6 +78,51 @@ body {
   }
 }
 
+.watermark::before {
+    content: '';
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle, 
+        rgba(0,255,255,0.15) 0%, 
+        transparent 70%);
+    top: -25%;
+    left: -25%;
+    z-index: -1;
+}
+
+/* Enhanced Watermark - Mobile Friendly */
+.watermark {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: clamp(1.2rem, 4vw, 1.8rem);
+    font-weight: 600;
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+    opacity: 0.9;
+    z-index: 100;
+    letter-spacing: 2px;
+    transform: rotate(-5deg);
+    animation: pulse 3s infinite alternate;
+}
+
+/* Mobile Touch Devices */
+@media (hover: none) {
+    .watermark {
+        text-shadow: 0 0 15px var(--neon-cyan);
+    }
+}
+
+/* Small Screens Landscape */
+@media (max-height: 500px) {
+    .watermark {
+        bottom: 5px;
+        right: 10px;
+    }
+}
+
 /* Background pattern */
 body::after {
   content: "";
